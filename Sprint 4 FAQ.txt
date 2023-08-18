@@ -1,0 +1,30 @@
+SPRINT-4
+FREQUENTLY ASKED QUESTIONS (FAQ) 
+1. What has been achieved in the Sprint 4?
+A. In SPRINT 4, we worked on read and create a heatmap representing coal and nuclear power plants in the presentation 
+   layer and business logic layer. Read and Update overlays in the presentation layer.
+
+2. What should be the connection string name when you submit the file to the Product Owner?
+A. You need to change the Connection string name as below. You need to change at these places : Program.cs(GlobalPowerPlants_Tester), PowerPlant.aspx.cs, Xouthos_CoalHeatMap.aspx.cs and Xouthos_NuclearHeatMap.aspx.cs
+   DB = new DataAccessClass("Server=DESKTOP-IU04KMD\\GREENE_001;Database=DB_ProjectGlobalPowerPlants;Trusted_Connection=Yes;"); 
+
+3. How did you implement heatmaps in the project?
+A. Plant Capacity was used as the weight for the heatmap. Lambdas were used to read power plants with nuclear and coal fuel types.
+   A menu system was implemented to switch back and forth between the heatmaps for different fuel types.
+
+4. How did you implement overlays in the project?
+A. A list box of selection items was created which allows the user to select the fuel type based on which the respective markers will be shown on the web page/map.
+   Also a graphical representation of the total number of power plants based on its fuel type has been displayed onto the map representing an overlay read functionality.
+
+5. Any comments about the sprint?
+A. The coders have confirmed validation from the Product Owner about their code implementation and achieving the target of 20 points each for their respective work.
+   The Scrum Master and Promote Person have worked from the code provided by the coders with the understanding that the required complexity for the sprint has been acheived.
+   We would like to implement the task provided to us as feedback for Sprint 3 (solve the problem of page taking long time to load) in Sprint 5 since we have already 
+   finished working on Sprint 4 and the team members have requested the product owner to address this issue for the last sprint.
+
+6. Do you have any extra points in the bank?
+A. We have 15 points from Sprint-3 which carries forward from the Polyline implementation in the presentation layer.So total 15 points in the bank from the previous sprint. 
+   We also have 6 points from Sprint-4 , reading a heatmap in the presentation layer and business logic layer in this sprint.
+
+
+

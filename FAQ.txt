@@ -1,0 +1,96 @@
+SPRINT-2 (Refer Sprint 3 FAQ Below)
+
+1. Give some information about the dataset
+A. Copyright: Copyright 2018-2021 World Resources Institute and Data Contributors
+   License: Creative Commons Attribution 4.0 International -- CC BY 4.0
+
+2. Why so many points in the database?
+A. Want to prepare ourselves for dealing with large amounts of data, which is generally what we expect to see in 
+   a potential GIS workspace
+
+3. Any shortcomings in the dataset?
+A. Some of the locations have less than 4 decimal values for Lats and Longs
+
+4. What sofware do you use to create these amazingly professional UML diagrams?
+A. Lucidchart. Its really cool and easy to create UML diagrams
+
+5. What version of Microsoft SQL Management Server Studio did you use for this project?
+A. Version 18.9.2
+
+6. What framework are you using for this project in visual studio?
+A. .NET Framework 4.7.2
+
+7. What to expect from Sprint 2?
+A. Sprint 2 is about getting sql and c# to communicate. Getting data from database layer to business logic layer
+   and vise versa. There is also an aspx output map for visual input for the user. The page is still in the works
+   and is not the final output
+
+8. What to expect from Sprint 3?
+A. In Sprint 3, the aspx page will be more refined. The location markers will be loaded using WebMethods and not DIV
+   as was the case in Sprint 2. Presentation layer code will be added and user will be able to interact with the project
+
+9. What to expect from the output?
+A. A nicely formed professional and interactive web page with information about the different types of
+   power plants around the world, plant capacity heatmaps, route creation and polylines
+
+10. Will there be any limitations on data to be entered by the user?
+A. The user will be directed to choose values from a set of selections so that no corrupt data is entered in the
+   database. This is made sure by setting up some conditions in the sql.
+   For Example: The user will not be able to enter a country which is not in the database
+
+
+SPRINT-3
+
+
+11.What is a Sprint Retrospective meeting?
+A.The sprint retrospective is a recurring meeting held at the end of a sprint used to discuss what went well 
+during the previous sprint cycle and what can be improved for the next sprint. It aims to continuously 
+improve the processes.
+
+12.What are the objectives of Sprint Retrospective meeting?
+A.i)What went well in the Sprint?
+
+ii)What did not go well in the Sprint?
+
+iii)What could have been done better in the upcoming Sprint?
+
+iv)Action items to resolve the issue
+
+13.How many database versions should be used by the team during the sprint ceremonies?
+A.All the team members should use the same updated Database during the sprint in order to avoid the chaos in the expected outcome or deliverables.
+
+14. What has been achieved in the Sprint 3?
+A. Sprint 3 is about getting the Power plant location markers (Create,Read and Delete) and create polylines using the sql and c# to communicate to 
+the Presentation layer. Getting data from database layer to business logic layer and vise versa. There is also an aspx output illustration map
+for the user to understand it visually and clearly. 
+
+15.How do you create a location marker on the Map?
+A.Start debugging the C# - Business logic layer by keeping the ProjectXouthos as Startup project and PowerPlant.aspz as start page.Wait for sometime 
+to get the web page loaded. Then, go to the map , zoom to the level where do you want to create a location marker.Right click on the mouse , you will
+get your new location markers on the map.
+
+16.How do you create a polyline on the Map?
+A.Start debugging the C# - Business logic layer by keeping the ProjectXouthos as Startup project and PowerPlant.aspz as start page.Wait for sometime 
+to get the web page loaded. Then, go to the map , zoom to the level where do you want to create a location marker.Left click on the mouse to start 
+the first point for the polyline path and continue the same till you get the desired polyline path on the map , you will get your new location 
+markers on the map.
+
+17.What should be the connection string name when you submit the file to the Product Owner?
+A.You need to change the Connection string name as below. You need to change at both the places : Program.cs(GlobalPowerPlants_Tester) and PowerPlant.aspx.cs
+DB = new DataAccessClass("Server=DESKTOP-IU04KMD\\GREENE_001;Database=DB_ProjectGlobalPowerPlants;Trusted_Connection=Yes;");
+
+18.Does the Power plant location markers give any other information?
+A.Yes, when you click on any of the location markers which are visible on the map, you could see an information window which provides the following details 
+of the power plants selected. The details include PlantID, Plant Nmae, Country it belongs to,Capacity of the plant,Latitude and longitude of the power plant,
+Primary fuel used and Commissioning date of the Plant.
+
+19.Why does all the plants have commissioning date as 1st January but the year varies?
+A.Since, the exact commissioning month and date of the Power plant is not mentioned in the database, In default we have coded to take the 1st Month 
+and 1st Day of the year as the default. But the database has the details of Power plants which has been commissioned from 1896 to 2020, hence it has taken the 
+actual commissioning year for the infor window.
+
+20.Why does some power plants shows the commissioning year as 01-01-0001?
+A.Almost a little more than 50 percent of the Power plants in the database does not have their commissioning year updated.Hence, 
+those null values will be represented as default value of 01-01-0001. This is an identification code to showcase that the commissining month,date and year 
+is still requires updatation.
+
